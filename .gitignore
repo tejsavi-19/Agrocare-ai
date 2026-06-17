@@ -1,0 +1,15 @@
+dataset/
+venv/
+**/venv/
+**/node_modules/
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+.env.local
+.vscode/
+.idea/
+AgroCareAI/backend/uploads/*
+!AgroCareAI/backend/uploads/.gitkeep
+models/leaf_stem_healthy_diseased.h5.bak

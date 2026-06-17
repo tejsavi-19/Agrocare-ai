@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply antialiased text-gray-100;
+    background: linear-gradient(rgba(4, 31, 14, 0.75), rgba(7, 48, 22, 0.85)), 
+                url('https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&w=2000&q=80');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] rounded-3xl transition-all duration-300;
+  }
+  
+  .glass-panel:hover {
+    @apply bg-white/10 border-white/20 shadow-[0_8px_32px_0_rgba(74,222,128,0.15)];
+  }
+
+  .glass-nav {
+    @apply bg-black/30 backdrop-blur-md border-b border-white/10 shadow-sm;
+  }
+
+  .glass-button {
+    @apply bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-400 hover:to-green-500 text-white shadow-[0_0_15px_rgba(16,185,129,0.4)] hover:shadow-[0_0_25px_rgba(16,185,129,0.7)] transition-all duration-300 border border-emerald-400/50 rounded-xl font-bold;
+  }
+
+  .glass-input {
+    @apply bg-black/20 border border-white/10 text-white placeholder-gray-400 focus:bg-black/40 focus:border-emerald-400/50 focus:ring-1 focus:ring-emerald-400/50 transition-all rounded-xl backdrop-blur-md;
+  }
+  
+  .glass-badge {
+    @apply bg-white/10 border border-white/20 backdrop-blur-md text-white font-semibold;
+  }
+}
+
+@keyframes click-blink {
+  0% { opacity: 1; filter: brightness(1); }
+  50% { opacity: 0.7; filter: brightness(1.5); }
+  100% { opacity: 1; filter: brightness(1); }
+}
+
+.animate-click-blink {
+  animation: click-blink 0.4s ease-in-out;
+}

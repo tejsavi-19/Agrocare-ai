@@ -1,0 +1,17 @@
+2026-02-14 03:40:02.960399: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-02-14 03:40:08.005351: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+============================================================
+Inference Code Verification
+============================================================
+Creating minimal test model...
+Traceback (most recent call last):
+  File "c:\Users\USER\Downloads\model\verify_inference.py", line 50, in <module>
+    create_minimal_test_model()
+  File "c:\Users\USER\Downloads\model\verify_inference.py", line 29, in create_minimal_test_model
+    model.save('models/leaf_stem_healthy_diseased')
+  File "C:\Users\USER\AppData\Local\Programs\Python\Python312\Lib\site-packages\keras\src\utils\traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\USER\AppData\Local\Programs\Python\Python312\Lib\site-packages\keras\src\saving\saving_api.py", line 114, in save_model
+    raise ValueError(
+ValueError: Invalid filepath extension for saving. Please add either a `.keras` extension for the native Keras format (recommended) or a `.h5` extension. Use `model.export(filepath)` if you want to export a SavedModel for use with TFLite/TFServing/etc. Received: filepath=models/leaf_stem_healthy_diseased.

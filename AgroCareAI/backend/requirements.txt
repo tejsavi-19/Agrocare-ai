@@ -1,0 +1,10 @@
+flask
+flask-sqlalchemy
+flask-cors
+flask-jwt-extended
+mysql-connector-python
+tensorflow
+numpy
+Pillow
+werkzeug
+python-dotenv
