@@ -1,6 +1,11 @@
 import mysql.connector
 
 def create_database():
+    from config import Config
+    if "localhost" not in Config.SQLALCHEMY_DATABASE_URI and "127.0.0.1" not in Config.SQLALCHEMY_DATABASE_URI:
+        print("Production database detected. Skipping database creation script.")
+        return
+
     try:
         mydb = mysql.connector.connect(
             host="localhost",
