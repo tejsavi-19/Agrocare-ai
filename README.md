@@ -1,3 +1,13 @@
+---
+title: Agrocare Ai
+emoji: 🌱
+colorFrom: green
+colorTo: lime
+sdk: docker
+app_port: 7860
+pinned: false
+---
+
 # Binary Plant Leaf/Stem Health Detection Model
 
 A TensorFlow-based deep learning model that classifies plant leaves or stems as **Healthy** or **Diseased** using binary classification.
