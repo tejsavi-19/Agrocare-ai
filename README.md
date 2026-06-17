@@ -2,7 +2,7 @@
 title: Agrocare Ai
 emoji: 🌱
 colorFrom: green
-colorTo: lime
+colorTo: yellow
 sdk: docker
 app_port: 7860
 pinned: false
